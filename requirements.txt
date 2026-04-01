@@ -1,0 +1,6 @@
+flask
+pdfplumber
+langchain
+langchain-core
+langchain-groq
+python-dotenv
