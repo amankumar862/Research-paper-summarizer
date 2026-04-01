@@ -22,7 +22,7 @@ AI-powered web app that summarizes research papers (PDFs) into structured and re
 
 ### 📊 Summary Output
 
-<img src="Research Paper Summarizer/images/result.png" width="700"/>
+<img src="Research Paper Summarizer/images/Result.png" width="700"/>
 
 ---
 
