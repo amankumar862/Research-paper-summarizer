@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Research Summarizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>📄 AI Research Paper Summarizer</h1>
+
+    <form id="form" class="card">
+        <input type="file" id="file" name="file" accept=".pdf" required>
+
+        <select id="length" name="length" class="dropdown">
+            <option value="short">Short (1 paragraph / ~1 page)</option>
+            <option value="medium" selected>Medium (2–3 pages)</option>
+            <option value="long">Large (5–7 pages)</option>
+        </select>
+
+        <button type="submit" id="btn">Summarize</button>
+
+        <div class="loader" id="loader">Processing...</div>
+
+        <div class="progress-container hidden" id="progressBox">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <div class="progress-text hidden" id="progressText"></div>
+
+        <div class="output" id="output"></div>
+
+        <button type="button" id="downloadBtn" class="hidden download-btn">
+            ⬇ Download Summary
+        </button>
+    </form>
+</div>
+
+<!-- Marked.js for beautiful Markdown rendering -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
